@@ -1,0 +1,120 @@
+{
+  "best_model": "XGBoost",
+  "feature_names": [
+    "crop",
+    "season",
+    "state",
+    "area",
+    "fertilizer",
+    "pesticide",
+    "year",
+    "N",
+    "P",
+    "K",
+    "pH",
+    "avg_temp_c",
+    "total_rainfall_mm",
+    "avg_humidity_percent"
+  ],
+  "feature_importance": {
+    "crop": 0.2503480017185211,
+    "season": 0.16613799333572388,
+    "state": 0.029022999107837677,
+    "area": 0.026525000110268593,
+    "fertilizer": 0.014831000007689,
+    "pesticide": 0.015294999815523624,
+    "year": 0.011718999594449997,
+    "N": 0.17931300401687622,
+    "P": 0.10025200247764587,
+    "K": 0.03079400025308132,
+    "pH": 0.10768099874258041,
+    "avg_temp_c": 0.018316000699996948,
+    "total_rainfall_mm": 0.009163999930024147,
+    "avg_humidity_percent": 0.04060199856758118
+  },
+  "split_sizes": {
+    "train": 14025,
+    "validation": 3037,
+    "test": 2123
+  },
+  "models": {
+    "Linear Regression (Baseline)": {
+      "train": {
+        "split": "train",
+        "n_samples": 14025,
+        "MAE": 4.923,
+        "RMSE": 10.0777,
+        "R2": 0.1235,
+        "MAPE_pct": 421.04
+      },
+      "validation": {
+        "split": "validation",
+        "n_samples": 3037,
+        "MAE": 4.9886,
+        "RMSE": 10.1157,
+        "R2": 0.1034,
+        "MAPE_pct": 369.58
+      },
+      "test": {
+        "split": "test",
+        "n_samples": 2123,
+        "MAE": 5.1093,
+        "RMSE": 10.7131,
+        "R2": 0.0901,
+        "MAPE_pct": 353.6
+      }
+    },
+    "Random Forest": {
+      "train": {
+        "split": "train",
+        "n_samples": 14025,
+        "MAE": 0.4528,
+        "RMSE": 1.5382,
+        "R2": 0.9796,
+        "MAPE_pct": 29.48
+      },
+      "validation": {
+        "split": "validation",
+        "n_samples": 3037,
+        "MAE": 1.1396,
+        "RMSE": 2.9636,
+        "R2": 0.923,
+        "MAPE_pct": 55.67
+      },
+      "test": {
+        "split": "test",
+        "n_samples": 2123,
+        "MAE": 1.3194,
+        "RMSE": 3.717,
+        "R2": 0.8905,
+        "MAPE_pct": 57.69
+      }
+    },
+    "XGBoost": {
+      "train": {
+        "split": "train",
+        "n_samples": 14025,
+        "MAE": 0.5068,
+        "RMSE": 1.0784,
+        "R2": 0.99,
+        "MAPE_pct": 36.19
+      },
+      "validation": {
+        "split": "validation",
+        "n_samples": 3037,
+        "MAE": 1.1423,
+        "RMSE": 2.7033,
+        "R2": 0.936,
+        "MAPE_pct": 60.71
+      },
+      "test": {
+        "split": "test",
+        "n_samples": 2123,
+        "MAE": 1.3075,
+        "RMSE": 3.51,
+        "R2": 0.9023,
+        "MAPE_pct": 60.63
+      }
+    }
+  }
+}

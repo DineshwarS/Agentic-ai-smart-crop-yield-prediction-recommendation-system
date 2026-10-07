@@ -1,0 +1,832 @@
+{
+  "crop_yield": {
+    "name": "crop_yield.csv",
+    "shape": {
+      "rows": 19689,
+      "columns": 9
+    },
+    "columns": [
+      "crop",
+      "year",
+      "season",
+      "state",
+      "area",
+      "production",
+      "fertilizer",
+      "pesticide",
+      "yield"
+    ],
+    "dtypes": {
+      "crop": "str",
+      "year": "int64",
+      "season": "str",
+      "state": "str",
+      "area": "float64",
+      "production": "int64",
+      "fertilizer": "float64",
+      "pesticide": "float64",
+      "yield": "float64"
+    },
+    "missing_values": {
+      "crop": 0,
+      "year": 0,
+      "season": 0,
+      "state": 0,
+      "area": 0,
+      "production": 0,
+      "fertilizer": 0,
+      "pesticide": 0,
+      "yield": 0
+    },
+    "missing_percent": {
+      "crop": 0.0,
+      "year": 0.0,
+      "season": 0.0,
+      "state": 0.0,
+      "area": 0.0,
+      "production": 0.0,
+      "fertilizer": 0.0,
+      "pesticide": 0.0,
+      "yield": 0.0
+    },
+    "duplicate_rows": 0,
+    "numerical_columns": [
+      "year",
+      "area",
+      "production",
+      "fertilizer",
+      "pesticide",
+      "yield"
+    ],
+    "categorical_columns": [
+      "crop",
+      "season",
+      "state"
+    ],
+    "numerical_stats": {
+      "year": {
+        "min": 1997.0,
+        "max": 2020.0,
+        "mean": 2009.1275839301134,
+        "std": 6.498098951393285,
+        "median": 2010.0,
+        "outlier_count_iqr": 0
+      },
+      "area": {
+        "min": 0.5,
+        "max": 50808100.0,
+        "mean": 179926.57030814158,
+        "std": 732828.6758877123,
+        "median": 9317.0,
+        "outlier_count_iqr": 3076
+      },
+      "production": {
+        "min": 0.0,
+        "max": 6326000000.0,
+        "mean": 16435941.273096653,
+        "std": 263056839.8125683,
+        "median": 13804.0,
+        "outlier_count_iqr": 3373
+      },
+      "fertilizer": {
+        "min": 54.17,
+        "max": 4835406877.0,
+        "mean": 24103312.448805965,
+        "std": 94946004.48252676,
+        "median": 1234957.44,
+        "outlier_count_iqr": 3093
+      },
+      "pesticide": {
+        "min": 0.09,
+        "max": 15750511.0,
+        "mean": 48848.35339200924,
+        "std": 213287.35485950505,
+        "median": 2421.9,
+        "outlier_count_iqr": 3036
+      },
+      "yield": {
+        "min": 0.0,
+        "max": 21105.0,
+        "mean": 79.9540091300867,
+        "std": 878.3061926565967,
+        "median": 1.03,
+        "outlier_count_iqr": 3065
+      }
+    },
+    "categorical_stats": {
+      "crop": {
+        "unique_count": 55,
+        "top_values": {
+          "Rice": 1197,
+          "Maize": 975,
+          "Moong(Green Gram)": 740,
+          "Urad": 733,
+          "Groundnut": 725,
+          "Sesamum": 685,
+          "Potato": 628,
+          "Sugarcane": 605,
+          "Wheat": 545,
+          "Rapeseed &Mustard": 528
+        }
+      },
+      "season": {
+        "unique_count": 6,
+        "top_values": {
+          "Kharif     ": 8232,
+          "Rabi       ": 5742,
+          "Whole Year ": 3717,
+          "Summer     ": 1195,
+          "Autumn     ": 414,
+          "Winter     ": 389
+        }
+      },
+      "state": {
+        "unique_count": 30,
+        "top_values": {
+          "Karnataka": 1432,
+          "Andhra Pradesh": 1266,
+          "West Bengal": 1094,
+          "Chhattisgarh": 915,
+          "Bihar": 896,
+          "Madhya Pradesh": 845,
+          "Uttar Pradesh": 825,
+          "Tamil Nadu": 822,
+          "Gujarat": 817,
+          "Maharashtra": 770
+        }
+      }
+    },
+    "target_column": "yield",
+    "task": "Regression \u2014 Crop Yield Prediction",
+    "leakage_warning": "'production' column = production/area = yield \u2192 MUST be excluded from features",
+    "year_range": "1997\u20132020",
+    "unique_crops": 55,
+    "unique_states": 30
+  },
+  "state_soil": {
+    "name": "state_soil_data.csv",
+    "shape": {
+      "rows": 30,
+      "columns": 5
+    },
+    "columns": [
+      "state",
+      "N",
+      "P",
+      "K",
+      "pH"
+    ],
+    "dtypes": {
+      "state": "str",
+      "N": "int64",
+      "P": "int64",
+      "K": "int64",
+      "pH": "float64"
+    },
+    "missing_values": {
+      "state": 0,
+      "N": 0,
+      "P": 0,
+      "K": 0,
+      "pH": 0
+    },
+    "missing_percent": {
+      "state": 0.0,
+      "N": 0.0,
+      "P": 0.0,
+      "K": 0.0,
+      "pH": 0.0
+    },
+    "duplicate_rows": 0,
+    "numerical_columns": [
+      "N",
+      "P",
+      "K",
+      "pH"
+    ],
+    "categorical_columns": [
+      "state"
+    ],
+    "numerical_stats": {
+      "N": {
+        "min": 50.0,
+        "max": 150.0,
+        "mean": 75.56666666666666,
+        "std": 22.730328112281047,
+        "median": 70.0,
+        "outlier_count_iqr": 3
+      },
+      "P": {
+        "min": 15.0,
+        "max": 55.0,
+        "mean": 31.466666666666665,
+        "std": 12.386681761370609,
+        "median": 29.0,
+        "outlier_count_iqr": 0
+      },
+      "K": {
+        "min": 20.0,
+        "max": 50.0,
+        "mean": 33.333333333333336,
+        "std": 7.594613941441674,
+        "median": 34.5,
+        "outlier_count_iqr": 0
+      },
+      "pH": {
+        "min": 5.5,
+        "max": 8.0,
+        "mean": 6.553333333333333,
+        "std": 0.7637174659624408,
+        "median": 6.45,
+        "outlier_count_iqr": 0
+      }
+    },
+    "categorical_stats": {
+      "state": {
+        "unique_count": 30,
+        "top_values": {
+          "Andhra Pradesh": 1,
+          "Arunachal Pradesh": 1,
+          "Assam": 1,
+          "Bihar": 1,
+          "Chhattisgarh": 1,
+          "Delhi": 1,
+          "Goa": 1,
+          "Gujarat": 1,
+          "Haryana": 1,
+          "Himachal Pradesh": 1
+        }
+      }
+    },
+    "note": "Static per-state soil averages \u2014 join on 'state' column"
+  },
+  "state_weather": {
+    "name": "state_weather_data_1997_2020.csv",
+    "shape": {
+      "rows": 720,
+      "columns": 5
+    },
+    "columns": [
+      "state",
+      "year",
+      "avg_temp_c",
+      "total_rainfall_mm",
+      "avg_humidity_percent"
+    ],
+    "dtypes": {
+      "state": "str",
+      "year": "int64",
+      "avg_temp_c": "float64",
+      "total_rainfall_mm": "float64",
+      "avg_humidity_percent": "float64"
+    },
+    "missing_values": {
+      "state": 0,
+      "year": 0,
+      "avg_temp_c": 0,
+      "total_rainfall_mm": 0,
+      "avg_humidity_percent": 0
+    },
+    "missing_percent": {
+      "state": 0.0,
+      "year": 0.0,
+      "avg_temp_c": 0.0,
+      "total_rainfall_mm": 0.0,
+      "avg_humidity_percent": 0.0
+    },
+    "duplicate_rows": 0,
+    "numerical_columns": [
+      "year",
+      "avg_temp_c",
+      "total_rainfall_mm",
+      "avg_humidity_percent"
+    ],
+    "categorical_columns": [
+      "state"
+    ],
+    "numerical_stats": {
+      "year": {
+        "min": 1997.0,
+        "max": 2020.0,
+        "mean": 2008.5,
+        "std": 6.926998639597835,
+        "median": 2008.5,
+        "outlier_count_iqr": 0
+      },
+      "avg_temp_c": {
+        "min": 6.26,
+        "max": 28.63,
+        "mean": 23.38338888888889,
+        "std": 4.968675749944064,
+        "median": 25.115000000000002,
+        "outlier_count_iqr": 48
+      },
+      "total_rainfall_mm": {
+        "min": 249.24,
+        "max": 5363.28,
+        "mean": 1388.4610833333334,
+        "std": 672.5038419117241,
+        "median": 1231.83,
+        "outlier_count_iqr": 21
+      },
+      "avg_humidity_percent": {
+        "min": 34.47,
+        "max": 86.06,
+        "mean": 64.82576388888889,
+        "std": 12.148614874362947,
+        "median": 68.71000000000001,
+        "outlier_count_iqr": 0
+      }
+    },
+    "categorical_stats": {
+      "state": {
+        "unique_count": 30,
+        "top_values": {
+          "Andhra Pradesh": 24,
+          "Arunachal Pradesh": 24,
+          "Assam": 24,
+          "Bihar": 24,
+          "Chhattisgarh": 24,
+          "Delhi": 24,
+          "Goa": 24,
+          "Gujarat": 24,
+          "Haryana": 24,
+          "Himachal Pradesh": 24
+        }
+      }
+    },
+    "note": "Annual aggregates: avg_temp_c=annual average \u00b0C, total_rainfall_mm=annual total mm, avg_humidity_percent=annual avg %",
+    "join_key": [
+      "state",
+      "year"
+    ]
+  },
+  "crop_recommendation": {
+    "name": "Crop_recommendation.csv",
+    "shape": {
+      "rows": 2200,
+      "columns": 8
+    },
+    "columns": [
+      "N",
+      "P",
+      "K",
+      "temperature",
+      "humidity",
+      "ph",
+      "rainfall",
+      "label"
+    ],
+    "dtypes": {
+      "N": "int64",
+      "P": "int64",
+      "K": "int64",
+      "temperature": "float64",
+      "humidity": "float64",
+      "ph": "float64",
+      "rainfall": "float64",
+      "label": "str"
+    },
+    "missing_values": {
+      "N": 0,
+      "P": 0,
+      "K": 0,
+      "temperature": 0,
+      "humidity": 0,
+      "ph": 0,
+      "rainfall": 0,
+      "label": 0
+    },
+    "missing_percent": {
+      "N": 0.0,
+      "P": 0.0,
+      "K": 0.0,
+      "temperature": 0.0,
+      "humidity": 0.0,
+      "ph": 0.0,
+      "rainfall": 0.0,
+      "label": 0.0
+    },
+    "duplicate_rows": 0,
+    "numerical_columns": [
+      "N",
+      "P",
+      "K",
+      "temperature",
+      "humidity",
+      "ph",
+      "rainfall"
+    ],
+    "categorical_columns": [
+      "label"
+    ],
+    "numerical_stats": {
+      "N": {
+        "min": 0.0,
+        "max": 140.0,
+        "mean": 50.551818181818184,
+        "std": 36.9173338337566,
+        "median": 37.0,
+        "outlier_count_iqr": 0
+      },
+      "P": {
+        "min": 5.0,
+        "max": 145.0,
+        "mean": 53.36272727272727,
+        "std": 32.98588273858715,
+        "median": 51.0,
+        "outlier_count_iqr": 138
+      },
+      "K": {
+        "min": 5.0,
+        "max": 205.0,
+        "mean": 48.14909090909091,
+        "std": 50.64793054666013,
+        "median": 32.0,
+        "outlier_count_iqr": 200
+      },
+      "temperature": {
+        "min": 8.825674745,
+        "max": 43.67549305,
+        "mean": 25.616243851779544,
+        "std": 5.063748599958843,
+        "median": 25.5986932,
+        "outlier_count_iqr": 86
+      },
+      "humidity": {
+        "min": 14.25803981,
+        "max": 99.98187601,
+        "mean": 71.48177921778637,
+        "std": 22.263811589761083,
+        "median": 80.473145665,
+        "outlier_count_iqr": 30
+      },
+      "ph": {
+        "min": 3.504752314,
+        "max": 9.93509073,
+        "mean": 6.469480065256364,
+        "std": 0.7739376880298733,
+        "median": 6.42504527,
+        "outlier_count_iqr": 57
+      },
+      "rainfall": {
+        "min": 20.21126747,
+        "max": 298.5601175,
+        "mean": 103.46365541576817,
+        "std": 54.95838852487813,
+        "median": 94.86762427,
+        "outlier_count_iqr": 100
+      }
+    },
+    "categorical_stats": {
+      "label": {
+        "unique_count": 22,
+        "top_values": {
+          "rice": 100,
+          "maize": 100,
+          "chickpea": 100,
+          "kidneybeans": 100,
+          "pigeonpeas": 100,
+          "mothbeans": 100,
+          "mungbean": 100,
+          "blackgram": 100,
+          "lentil": 100,
+          "pomegranate": 100
+        }
+      }
+    },
+    "target_column": "label",
+    "task": "Classification \u2014 Crop Recommendation",
+    "unique_crops": 22,
+    "class_distribution": {
+      "rice": 100,
+      "maize": 100,
+      "chickpea": 100,
+      "kidneybeans": 100,
+      "pigeonpeas": 100,
+      "mothbeans": 100,
+      "mungbean": 100,
+      "blackgram": 100,
+      "lentil": 100,
+      "pomegranate": 100,
+      "banana": 100,
+      "mango": 100,
+      "grapes": 100,
+      "watermelon": 100,
+      "muskmelon": 100,
+      "apple": 100,
+      "orange": 100,
+      "papaya": 100,
+      "coconut": 100,
+      "cotton": 100,
+      "jute": 100,
+      "coffee": 100
+    },
+    "note": "Features: N, P, K, temperature, humidity, ph, rainfall. rainfall here is likely seasonal/growing-season mm \u2014 NOT annual total."
+  },
+  "validation": {
+    "name": "Crops yield and Historical Dataset.csv",
+    "shape": {
+      "rows": 50765,
+      "columns": 20
+    },
+    "columns": [
+      "Dist Code",
+      "Year",
+      "State Code",
+      "State Name",
+      "Dist Name",
+      "Crop",
+      "Area_ha",
+      "Yield_kg_per_ha",
+      "N_req_kg_per_ha",
+      "P_req_kg_per_ha",
+      "K_req_kg_per_ha",
+      "Total_N_kg",
+      "Total_P_kg",
+      "Total_K_kg",
+      "Temperature_C",
+      "Humidity_%",
+      "pH",
+      "Rainfall_mm",
+      "Wind_Speed_m_s",
+      "Solar_Radiation_MJ_m2_day"
+    ],
+    "dtypes": {
+      "Dist Code": "int64",
+      "Year": "int64",
+      "State Code": "int64",
+      "State Name": "str",
+      "Dist Name": "str",
+      "Crop": "str",
+      "Area_ha": "float64",
+      "Yield_kg_per_ha": "float64",
+      "N_req_kg_per_ha": "float64",
+      "P_req_kg_per_ha": "float64",
+      "K_req_kg_per_ha": "float64",
+      "Total_N_kg": "float64",
+      "Total_P_kg": "float64",
+      "Total_K_kg": "float64",
+      "Temperature_C": "int64",
+      "Humidity_%": "int64",
+      "pH": "float64",
+      "Rainfall_mm": "int64",
+      "Wind_Speed_m_s": "float64",
+      "Solar_Radiation_MJ_m2_day": "int64"
+    },
+    "missing_values": {
+      "Dist Code": 0,
+      "Year": 0,
+      "State Code": 0,
+      "State Name": 0,
+      "Dist Name": 0,
+      "Crop": 0,
+      "Area_ha": 0,
+      "Yield_kg_per_ha": 0,
+      "N_req_kg_per_ha": 0,
+      "P_req_kg_per_ha": 0,
+      "K_req_kg_per_ha": 0,
+      "Total_N_kg": 0,
+      "Total_P_kg": 0,
+      "Total_K_kg": 0,
+      "Temperature_C": 0,
+      "Humidity_%": 0,
+      "pH": 0,
+      "Rainfall_mm": 0,
+      "Wind_Speed_m_s": 0,
+      "Solar_Radiation_MJ_m2_day": 0
+    },
+    "missing_percent": {
+      "Dist Code": 0.0,
+      "Year": 0.0,
+      "State Code": 0.0,
+      "State Name": 0.0,
+      "Dist Name": 0.0,
+      "Crop": 0.0,
+      "Area_ha": 0.0,
+      "Yield_kg_per_ha": 0.0,
+      "N_req_kg_per_ha": 0.0,
+      "P_req_kg_per_ha": 0.0,
+      "K_req_kg_per_ha": 0.0,
+      "Total_N_kg": 0.0,
+      "Total_P_kg": 0.0,
+      "Total_K_kg": 0.0,
+      "Temperature_C": 0.0,
+      "Humidity_%": 0.0,
+      "pH": 0.0,
+      "Rainfall_mm": 0.0,
+      "Wind_Speed_m_s": 0.0,
+      "Solar_Radiation_MJ_m2_day": 0.0
+    },
+    "duplicate_rows": 0,
+    "numerical_columns": [
+      "Dist Code",
+      "Year",
+      "State Code",
+      "Area_ha",
+      "Yield_kg_per_ha",
+      "N_req_kg_per_ha",
+      "P_req_kg_per_ha",
+      "K_req_kg_per_ha",
+      "Total_N_kg",
+      "Total_P_kg",
+      "Total_K_kg",
+      "Temperature_C",
+      "Humidity_%",
+      "pH",
+      "Rainfall_mm",
+      "Wind_Speed_m_s",
+      "Solar_Radiation_MJ_m2_day"
+    ],
+    "categorical_columns": [
+      "State Name",
+      "Dist Name",
+      "Crop"
+    ],
+    "numerical_stats": {
+      "Dist Code": {
+        "min": 1.0,
+        "max": 917.0,
+        "mean": 250.21875307790802,
+        "std": 269.062837292422,
+        "median": 144.0,
+        "outlier_count_iqr": 10735
+      },
+      "Year": {
+        "min": 1966.0,
+        "max": 2017.0,
+        "mean": 1991.5627696247413,
+        "std": 14.936844190399393,
+        "median": 1992.0,
+        "outlier_count_iqr": 0
+      },
+      "State Code": {
+        "min": 1.0,
+        "max": 20.0,
+        "mean": 9.169821727568207,
+        "std": 4.852092875570173,
+        "median": 9.0,
+        "outlier_count_iqr": 0
+      },
+      "Area_ha": {
+        "min": 10.0,
+        "max": 1154230.0,
+        "mean": 63765.22682950852,
+        "std": 112790.17884033933,
+        "median": 16900.0,
+        "outlier_count_iqr": 5902
+      },
+      "Yield_kg_per_ha": {
+        "min": 0.28,
+        "max": 58363.64,
+        "mean": 1159.8147113168523,
+        "std": 1005.0660073037436,
+        "median": 922.08,
+        "outlier_count_iqr": 2253
+      },
+      "N_req_kg_per_ha": {
+        "min": 0.00756,
+        "max": 1050.54552,
+        "mean": 28.56734210755442,
+        "std": 26.289890610086637,
+        "median": 20.29131,
+        "outlier_count_iqr": 1910
+      },
+      "P_req_kg_per_ha": {
+        "min": 0.00336,
+        "max": 583.6364,
+        "mean": 13.517312997143701,
+        "std": 12.036833651595812,
+        "median": 10.0307,
+        "outlier_count_iqr": 2144
+      },
+      "K_req_kg_per_ha": {
+        "min": 0.00756,
+        "max": 1050.54552,
+        "mean": 22.676814177287504,
+        "std": 19.43224367304903,
+        "median": 17.0,
+        "outlier_count_iqr": 2627
+      },
+      "Total_N_kg": {
+        "min": 9.18,
+        "max": 80375238.06000002,
+        "mean": 2263185.592605622,
+        "std": 5322256.797285589,
+        "median": 288000.0,
+        "outlier_count_iqr": 7607
+      },
+      "Total_P_kg": {
+        "min": 4.08,
+        "max": 38580114.268800005,
+        "mean": 1080920.2030698315,
+        "std": 2546764.0217543403,
+        "median": 140000.1,
+        "outlier_count_iqr": 7556
+      },
+      "Total_K_kg": {
+        "min": 9.18,
+        "max": 70730209.49280001,
+        "mean": 1933930.9943213575,
+        "std": 4640902.426882222,
+        "median": 241998.68,
+        "outlier_count_iqr": 7661
+      },
+      "Temperature_C": {
+        "min": 20.0,
+        "max": 28.0,
+        "mean": 23.261971830985914,
+        "std": 2.7727719086853004,
+        "median": 22.0,
+        "outlier_count_iqr": 0
+      },
+      "Humidity_%": {
+        "min": 60.0,
+        "max": 80.0,
+        "mean": 69.4541514823205,
+        "std": 7.767089786007067,
+        "median": 70.0,
+        "outlier_count_iqr": 0
+      },
+      "pH": {
+        "min": 6.0,
+        "max": 6.5,
+        "mean": 6.28390623461046,
+        "std": 0.2476925025013504,
+        "median": 6.5,
+        "outlier_count_iqr": 0
+      },
+      "Rainfall_mm": {
+        "min": 600.0,
+        "max": 1200.0,
+        "mean": 848.0921895006402,
+        "std": 239.46512313988572,
+        "median": 800.0,
+        "outlier_count_iqr": 0
+      },
+      "Wind_Speed_m_s": {
+        "min": 1.5,
+        "max": 3.0,
+        "mean": 2.156574411503989,
+        "std": 0.5167438780334026,
+        "median": 2.0,
+        "outlier_count_iqr": 0
+      },
+      "Solar_Radiation_MJ_m2_day": {
+        "min": 16.0,
+        "max": 22.0,
+        "mean": 18.626297646015956,
+        "std": 2.0669755121336104,
+        "median": 18.0,
+        "outlier_count_iqr": 0
+      }
+    },
+    "categorical_stats": {
+      "State Name": {
+        "unique_count": 20,
+        "top_values": {
+          "Uttar Pradesh": 7488,
+          "Madhya Pradesh": 6339,
+          "Maharashtra": 4734,
+          "Rajasthan": 4100,
+          "Karnataka": 3473,
+          "Gujarat": 3211,
+          "Orissa": 2410,
+          "West Bengal": 2077,
+          "Andhra Pradesh": 1996,
+          "Punjab": 1975
+        }
+      },
+      "Dist Name": {
+        "unique_count": 311,
+        "top_values": {
+          "Chhindwara": 208,
+          "Jhabua": 208,
+          "Khargone / West Nimar": 208,
+          "Khandwa / East Nimar": 208,
+          "Guntur": 208,
+          "Ananthapur": 208,
+          "Chitradurga": 208,
+          "Belgaum": 208,
+          "Bidar": 208,
+          "Nasik": 208
+        }
+      },
+      "Crop": {
+        "unique_count": 4,
+        "top_values": {
+          "rice": 14978,
+          "maize": 14136,
+          "chickpea": 13847,
+          "cotton": 7804
+        }
+      }
+    },
+    "target_column": "Yield_kg_per_ha",
+    "task": "External Validation Only (NOT for training)",
+    "unit_warning": "Yield unit = kg/ha. Primary dataset uses tonnes/ha. Apply / 1000 conversion before cross-dataset comparison.",
+    "year_range": "1966\u20132017",
+    "unique_crops": 4,
+    "unique_states": 20
+  }
+}

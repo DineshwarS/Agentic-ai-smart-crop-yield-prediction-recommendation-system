@@ -1,0 +1,16 @@
+{
+  "dataset": "Crops yield and Historical Dataset.csv",
+  "unit_conversion": "Yield_kg_per_ha / 1000 = tonnes/ha",
+  "compatible_rows": 25951,
+  "notes": [
+    "season set to 'Whole Year' (not present in validation dataset)",
+    "pesticide set to 0 (not available in validation dataset)",
+    "Only crops and states present in training encoder are evaluated"
+  ],
+  "metrics": {
+    "MAE": 1.4118,
+    "RMSE": 1.7827,
+    "R2": -1.8864,
+    "MAPE_pct": 129.53
+  }
+}

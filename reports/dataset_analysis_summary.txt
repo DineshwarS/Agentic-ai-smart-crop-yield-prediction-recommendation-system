@@ -1,0 +1,35 @@
+DATASET ANALYSIS SUMMARY
+======================================================================
+
+Dataset: crop_yield.csv
+  Rows: 19689, Columns: 9
+  Columns: crop, year, season, state, area, production, fertilizer, pesticide, yield
+  Duplicates: 0
+  Missing: None
+  [!] LEAKAGE: 'production' column = production/area = yield → MUST be excluded from features
+
+Dataset: state_soil_data.csv
+  Rows: 30, Columns: 5
+  Columns: state, N, P, K, pH
+  Duplicates: 0
+  Missing: None
+
+Dataset: state_weather_data_1997_2020.csv
+  Rows: 720, Columns: 5
+  Columns: state, year, avg_temp_c, total_rainfall_mm, avg_humidity_percent
+  Duplicates: 0
+  Missing: None
+
+Dataset: Crop_recommendation.csv
+  Rows: 2200, Columns: 8
+  Columns: N, P, K, temperature, humidity, ph, rainfall, label
+  Duplicates: 0
+  Missing: None
+
+Dataset: Crops yield and Historical Dataset.csv
+  Rows: 50765, Columns: 20
+  Columns: Dist Code, Year, State Code, State Name, Dist Name, Crop, Area_ha, Yield_kg_per_ha, N_req_kg_per_ha, P_req_kg_per_ha, K_req_kg_per_ha, Total_N_kg, Total_P_kg, Total_K_kg, Temperature_C, Humidity_%, pH, Rainfall_mm, Wind_Speed_m_s, Solar_Radiation_MJ_m2_day
+  Duplicates: 0
+  Missing: None
+  [!] UNIT: Yield unit = kg/ha. Primary dataset uses tonnes/ha. Apply / 1000 conversion before cross-dataset comparison.
+
